@@ -1,5 +1,6 @@
 import turtle
 
+
 def draw_pifagor_tree(branch_length, recursion_level):
     if recursion_level == 0:
         return
@@ -20,6 +21,7 @@ def draw_pifagor_tree(branch_length, recursion_level):
         # Повертаємося на початковий кут
         turtle.left(45)
         turtle.backward(branch_length)
+
 
 # Введення рівня рекурсії від користувача
 recursion_level = int(input("Введіть рівень рекурсії: "))
