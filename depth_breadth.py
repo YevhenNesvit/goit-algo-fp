@@ -45,11 +45,12 @@ def depth_first_traversal(node, visited=None):
     visited.add(node)
     node.color = get_color(len(visited))
     draw_tree(root)
+    node.color = "skyblue"
     if node.left and node.left not in visited:
         depth_first_traversal(node.left, visited)
     if node.right and node.right not in visited:
         depth_first_traversal(node.right, visited)
-    node.color = "skyblue"  # Повертаємо колір вузла до блакитного після завершення обходу
+
 
 def breadth_first_traversal(root):
     visited = set()
@@ -59,12 +60,12 @@ def breadth_first_traversal(root):
         visited.add(node)
         node.color = get_color(len(visited))
         draw_tree(root)
+        node.color = "skyblue"
         if node.left and node.left not in visited:
             queue.append(node.left)
         if node.right and node.right not in visited:
             queue.append(node.right)
-    for node in visited:
-        node.color = "skyblue"  # Повертаємо колір вузла до блакитного після завершення обходу
+
 
 def get_color(step):
     # Convert step to RGB color
